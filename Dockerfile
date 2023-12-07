@@ -7,7 +7,7 @@ RUN mvn package -DskipTests
 FROM tomcat:8.5.93-jdk8-temurin-jammy
 COPY --from=build /tmp/target/*.war /usr/local/tomcat/webapps/ROOT.war
 
-EXPOSE 8080
+EXPOSE 8080 
 
 ENTRYPOINT []
 
